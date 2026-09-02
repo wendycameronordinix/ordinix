@@ -57,6 +57,14 @@ function Index() {
           >
             Get in touch
           </a>
+          <a
+            href="https://www.linkedin.com/company/ordinix-limited/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          >
+            LinkedIn
+          </a>
         </div>
       </section>
 
