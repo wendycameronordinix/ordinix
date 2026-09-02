@@ -4,7 +4,7 @@ import coverAsset from "../assets/adapt-or-die-cover.png.asset.json";
 export const Route = createFileRoute("/adaptordie")({
   head: () => ({
     meta: [
-      { title: "Adapt or Die — a book by Wendy Cameron" },
+      { title: "Ordinix Limited - Adapt or Die publication" },
       {
         name: "description",
         content:
@@ -12,7 +12,7 @@ export const Route = createFileRoute("/adaptordie")({
       },
       {
         property: "og:title",
-        content: "Adapt or Die — a book by Wendy Cameron",
+        content: "Ordinix Limited - Adapt or Die publication",
       },
       {
         property: "og:description",
@@ -45,9 +45,9 @@ function AdaptOrDiePage() {
         />
         <div>
           <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-            Adapt or Die
+            Ordinix Limited
           </h1>
-          <p className="mt-2 text-lg text-muted-foreground">by Wendy Cameron</p>
+          <p className="mt-2 text-lg text-muted-foreground">Adapt or Die publication</p>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
             A practical guide to navigating change, building resilience, and adapting when it
             matters most. For leaders and teams who know that standing still is not an option.
