@@ -38,25 +38,25 @@ function Index() {
           />
         </div>
         <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-          Adapt. Evolve. Thrive.
+          Principal Architect & Strategic Advisory
         </h1>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-          Ordinix helps organisations cut through complexity and build the clarity, resilience,
-          and momentum they need to keep moving forward.
+          Ordinix partners with financial services, insurance, and media organisations to
+          architect and deliver high-impact digital transformations.
         </p>
         <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Link
-            to="/adaptordie"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            The book: Adapt or Die
-          </Link>
           <a
             href="mailto:hello@ordinix.co.uk"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Get in touch
           </a>
+          <Link
+            to="/adaptordie"
+            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          >
+            Adapt or Die
+          </Link>
           <a
             href="https://www.linkedin.com/company/ordinix-limited/"
             target="_blank"
@@ -72,35 +72,35 @@ function Index() {
         <h2 className="text-2xl font-semibold tracking-tight text-foreground">What we do</h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2">
           <ServiceCard
-            title="AI-first orchestration & agentic workflows"
-            description="Design and deploy autonomous, goal-driven systems that connect people, data and decisions across your enterprise."
+            title="AI-First Orchestration & Agentic Workflows"
+            description="Designing enterprise adoption frameworks for AI-driven automation and intelligent business processes."
           />
           <ServiceCard
-            title="Data strategy & platforms"
-            description="Azure Lakehouse, Snowflake, Data Mesh and modern data platforms built for scale, governance and real insight."
+            title="Data Strategy & Platforms"
+            description="Azure Lakehouse (Databricks), Snowflake, and federated Data Mesh governance that unlock competitive advantage."
           />
           <ServiceCard
-            title="Enterprise integration & API-first solutions"
-            description="Resilient, event-driven architecture that unites legacy systems, SaaS and partners behind clean, secure APIs."
+            title="Enterprise Integration Architecture"
+            description="API-first solutions, integration governance, and seamless ecosystem connectivity."
           />
           <ServiceCard
-            title="Cloud-native & microservices"
-            description="AWS, Azure and Kubernetes platforms engineered for reliability, elasticity and continuous delivery."
+            title="Cloud-Native & Microservices"
+            description="Scalable, resilient architectures across AWS, Azure, and Kubernetes with security built in."
           />
           <ServiceCard
-            title="Strategic discovery & validation"
-            description="Rapid, evidence-based exploration that turns uncertainty into a clear, actionable path forward."
+            title="Strategic Discovery"
+            description="Time-boxed sandbox spikes and fail-fast validation to de-risk architectural investment."
           />
         </div>
       </section>
 
       <section className="py-12">
-        <h2 className="text-2xl font-semibold tracking-tight text-foreground">Experience</h2>
+        <h2 className="text-2xl font-semibold tracking-tight text-foreground">How we work</h2>
         <p className="mt-4 leading-relaxed text-muted-foreground">
-          25+ years delivering mission-critical digital transformations for financial services,
-          insurance and media. From enterprise-wide re-platforming to targeted advisory, we bring
-          the architecture, delivery discipline and commercial judgement needed to make change
-          stick.
+          With 25+ years leading mission-critical transformations at scale, we operate as a force
+          multiplier—bridging the gap between C-suite vision and engineering execution. We identify
+          architectural risks early, establish governance frameworks, and deliver production-ready
+          solutions on schedule.
         </p>
       </section>
 
