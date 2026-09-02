@@ -1,24 +1,54 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Ordinix — Adapt. Evolve. Thrive." },
+      {
+        name: "description",
+        content:
+          "Ordinix helps organisations navigate change, build resilience, and create lasting value.",
+      },
+      {
+        property: "og:title",
+        content: "Ordinix — Adapt. Evolve. Thrive.",
+      },
+      {
+        property: "og:description",
+        content:
+          "Ordinix helps organisations navigate change, build resilience, and create lasting value.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <section className="mx-auto flex max-w-3xl flex-col justify-center px-6 py-24">
+      <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+        Adapt. Evolve. Thrive.
+      </h1>
+      <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+        Ordinix helps organisations cut through complexity and build the clarity, resilience,
+        and momentum they need to keep moving forward.
+      </p>
+      <div className="mt-10 flex flex-wrap items-center gap-4">
+        <Link
+          to="/adaptordie"
+          className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+        >
+          The book: Adapt or Die
+        </Link>
+        <a
+          href="mailto:hello@ordinix.co.uk"
+          className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+        >
+          Get in touch
+        </a>
+      </div>
+    </section>
   );
 }

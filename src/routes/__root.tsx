@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Ordinix" },
+      { name: "description", content: "Ordinix helps organisations adapt, evolve, and thrive." },
+      { name: "author", content: "Wendy Cameron" },
+      { property: "og:title", content: "Ordinix" },
+      { property: "og:description", content: "Ordinix helps organisations adapt, evolve, and thrive." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@ordinix" },
     ],
     links: [
       {
@@ -114,13 +114,45 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+function Header() {
+  return (
+    <header className="w-full border-b border-border">
+      <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-5">
+        <Link to="/" className="text-lg font-semibold tracking-tight text-foreground">
+          Ordinix
+        </Link>
+        <nav className="flex items-center gap-6 text-sm font-medium">
+          <Link
+            to="/"
+            activeProps={{ className: "text-foreground" }}
+            inactiveProps={{ className: "text-muted-foreground hover:text-foreground transition-colors" }}
+          >
+            Home
+          </Link>
+          <Link
+            to="/adaptordie"
+            activeProps={{ className: "text-foreground" }}
+            inactiveProps={{ className: "text-muted-foreground hover:text-foreground transition-colors" }}
+          >
+            Adapt or Die
+          </Link>
+        </nav>
+      </div>
+    </header>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+      </div>
     </QueryClientProvider>
   );
 }
