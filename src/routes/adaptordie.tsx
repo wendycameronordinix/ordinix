@@ -20,8 +20,10 @@ export const Route = createFileRoute("/adaptordie")({
           "A practical book about navigating change, building resilience, and adapting when it matters most.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/adaptordie" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/adaptordie" }],
   }),
   component: AdaptOrDiePage,
 });
