@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import coverAsset from "../assets/adapt-or-die-cover.png.asset.json";
 
 export const Route = createFileRoute("/adaptordie")({
