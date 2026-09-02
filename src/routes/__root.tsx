@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import logoAsset from "../assets/ordinix-logo.png.asset.json";
 
 function NotFoundComponent() {
   return (
@@ -91,7 +92,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),
   shellComponent: RootShell,
@@ -118,8 +119,12 @@ function Header() {
   return (
     <header className="w-full border-b border-border">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-5">
-        <Link to="/" className="text-lg font-semibold tracking-tight text-foreground">
-          Ordinix
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src={logoAsset.url}
+            alt="Ordinix"
+            className="h-8 w-auto"
+          />
         </Link>
         <nav className="flex items-center gap-6 text-sm font-medium">
           <Link

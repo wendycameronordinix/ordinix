@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import logoAsset from "../assets/ordinix-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,6 +29,13 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <section className="mx-auto flex max-w-3xl flex-col justify-center px-6 py-24">
+      <div className="mb-10">
+        <img
+          src={logoAsset.url}
+          alt="Ordinix Limited"
+          className="h-20 w-auto sm:h-24"
+        />
+      </div>
       <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
         Adapt. Evolve. Thrive.
       </h1>
