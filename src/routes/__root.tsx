@@ -73,6 +73,21 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Ordinix Limited",
+  url: "https://www.ordinix.co.uk",
+  sameAs: ["https://www.linkedin.com/company/ordinix-limited/"],
+  foundingDate: "2016",
+  industry: "Technology, Information and Internet",
+  numberOfEmployees: {
+    "@type": "QuantitativeValue",
+    minValue: 2,
+    maxValue: 10,
+  },
+};
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
@@ -93,6 +108,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(organizationSchema),
+      },
     ],
   }),
   shellComponent: RootShell,

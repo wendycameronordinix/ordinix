@@ -4,24 +4,26 @@ import logoAsset from "../assets/ordinix-logo.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ordinix — Adapt. Evolve. Thrive." },
+      { title: "Ordinix Limited | Principal Architect & Strategic Advisory" },
       {
         name: "description",
         content:
-          "Ordinix delivers AI-first orchestration, data strategy, enterprise integration and cloud-native architecture for financial services, insurance and media.",
+          "Ordinix partners with financial services, insurance and media organisations to architect and deliver high-impact digital transformations. Available for contract and advisory engagements.",
       },
       {
         property: "og:title",
-        content: "Ordinix — Adapt. Evolve. Thrive.",
+        content: "Ordinix Limited | Principal Architect & Strategic Advisory",
       },
       {
         property: "og:description",
         content:
-          "Ordinix delivers AI-first orchestration, data strategy, enterprise integration and cloud-native architecture for financial services, insurance and media.",
+          "Ordinix partners with financial services, insurance and media organisations to architect and deliver high-impact digital transformations. Available for contract and advisory engagements.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });
