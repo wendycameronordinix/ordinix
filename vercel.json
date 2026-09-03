@@ -1,4 +1,10 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": ".output"
+  "outputDirectory": ".output/public",
+  "functions": {
+    ".output/server/**/*.mjs": {
+      "memory": 3008,
+      "maxDuration": 60
+    }
+  }
 }
