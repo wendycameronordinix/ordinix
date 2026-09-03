@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import coverAsset from "../assets/adapt-or-die-cover.png.asset.json";
 
 export const Route = createFileRoute("/adaptordie")({
   head: () => ({
@@ -42,7 +41,7 @@ function AdaptOrDiePage() {
       </Link>
       <div className="mt-8 grid gap-10 sm:grid-cols-[240px_1fr] sm:items-start">
         <img
-          src={coverAsset.url}
+          src={`${import.meta.env.BASE_URL}adapt-or-die-cover.webp`}
           alt="Adapt or Die book cover by Wendy Cameron"
           className="w-full max-w-[240px] rounded-lg shadow-lg"
         />
