@@ -70,7 +70,7 @@ function AdaptOrDiePage() {
           </div>
         ) : (
           <form
-            action="https://formsubmit.co/your-email@ordinix.co.uk"
+            action="https://formsubmit.co/wendy.cameron@ordinix.co.uk"
             method="POST"
             className="mt-6 flex flex-col gap-3 sm:flex-row"
             onSubmit={(e) => {
