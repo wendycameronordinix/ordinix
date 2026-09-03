@@ -10,10 +10,6 @@ export default defineConfig({
     prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
   nitro: {
-    preset: "vercel",
-    output: {
-      dir: ".output",
-      serverDir: ".output/server",
-    },
+    preset: "vercel"
   },
 });
