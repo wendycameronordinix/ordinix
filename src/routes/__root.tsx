@@ -11,7 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import logoAsset from "../assets/ordinix-logo.png.asset.json";
+const logoUrl = "/ordinix-logo.webp";
 
 function NotFoundComponent() {
   return (
@@ -142,7 +142,7 @@ function Header() {
       <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-5">
         <Link to="/" className="flex items-center gap-3">
           <img
-            src={logoAsset.url}
+            src={logoUrl}
             alt="Ordinix"
             className="h-14 w-auto transition-transform duration-200 hover:scale-105"
           />
