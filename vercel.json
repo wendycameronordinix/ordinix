@@ -3,5 +3,6 @@
   "outputDirectory": ".output/public",
   "env": {
     "NODE_ENV": "production"
-  }
+  },
+  "nodeVersion": "20.x"
 }
