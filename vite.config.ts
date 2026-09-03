@@ -9,4 +9,7 @@ export default defineConfig({
     pages: [{ path: "/" }, { path: "/adaptordie" }],
     prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
+  nitro: {
+    preset: "static",
+  },
 });
