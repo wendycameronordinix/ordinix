@@ -10,6 +10,6 @@ export default defineConfig({
     prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
   nitro: {
-    preset: "static",
+    preset: "vercel",
   },
 });
