@@ -144,7 +144,7 @@ function Header() {
           <img
             src={logoAsset.url}
             alt="Ordinix"
-            className="h-8 w-auto"
+            className="h-14 w-auto transition-transform duration-200 hover:scale-105"
           />
         </Link>
         <nav className="flex items-center gap-6 text-sm font-medium">
