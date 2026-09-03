@@ -59,8 +59,8 @@ function AdaptOrDiePage() {
       <div className="mt-12 rounded-xl border border-border bg-card p-6">
         <h2 className="text-lg font-semibold text-card-foreground">Coming soon</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The book is currently being written. Sign up below to be the first to hear about
-          updates, sample chapters, and publication details.
+          The book is currently being written. Sign up below to be the first to hear about updates,
+          sample chapters, and publication details.
         </p>
         {submitted ? (
           <div className="mt-6 rounded-md border border-primary/30 bg-primary/10 px-4 py-3 text-sm text-primary">
@@ -70,9 +70,25 @@ function AdaptOrDiePage() {
         ) : (
           <form
             className="mt-6 flex flex-col gap-3 sm:flex-row"
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
-              setSubmitted(true);
+              const formData = new FormData(e.currentTarget);
+              const email = formData.get("email");
+
+              try {
+                const res = await fetch("/api/notify", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ email }),
+                });
+
+                if (res.ok) {
+                  setSubmitted(true);
+                  e.currentTarget.reset();
+                }
+              } catch (error) {
+                console.error("Error:", error);
+              }
             }}
           >
             <input
