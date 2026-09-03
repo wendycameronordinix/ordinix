@@ -80,6 +80,7 @@ function AdaptOrDiePage() {
             }}
           >
             <input type="hidden" name="_subject" value="New Ordinix Subscriber" />
+            <input type="hidden" name="_next" value="https://www.ordinix.co.uk/" />
             <input
               type="email"
               name="email"
