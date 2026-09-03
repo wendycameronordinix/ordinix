@@ -70,23 +70,28 @@ function AdaptOrDiePage() {
           </div>
         ) : (
           <form
+            action="https://formsubmit.co/your-email@ordinix.co.uk"
+            method="POST"
             className="mt-6 flex flex-col gap-3 sm:flex-row"
             onSubmit={(e) => {
               e.preventDefault();
               setSubmitted(true);
+              e.currentTarget.submit(); // Submit after showing success message
             }}
           >
+            <input type="hidden" name="_subject" value="New Ordinix Subscriber" />
             <input
               type="email"
+              name="email"
               required
-              placeholder="you@example.com"
+              placeholder="wendy.cameron@ordinix.co.uk"
               className="flex-1 rounded-md border border-input bg-background px-4 py-2.5 text-sm text-foreground outline-none ring-offset-background transition-colors focus-visible:ring-2 focus-visible:ring-ring"
             />
             <button
               type="submit"
               className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
             >
-              Notify me
+              {submitted ? "✓ Subscribed!" : "Notify me"}
             </button>
           </form>
         )}
