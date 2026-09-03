@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
+import coverAsset from "../assets/adapt-or-die-cover.png.asset.json";
 
 export const Route = createFileRoute("/adaptordie")({
   head: () => ({
@@ -41,7 +42,7 @@ function AdaptOrDiePage() {
       </Link>
       <div className="mt-8 grid gap-10 sm:grid-cols-[240px_1fr] sm:items-start">
         <img
-          src={`${import.meta.env.BASE_URL}adapt-or-die-cover.webp`}
+          src={coverAsset.url}
           alt="Adapt or Die book cover by Wendy Cameron"
           className="w-full max-w-[240px] rounded-lg shadow-lg"
         />
@@ -70,25 +71,9 @@ function AdaptOrDiePage() {
         ) : (
           <form
             className="mt-6 flex flex-col gap-3 sm:flex-row"
-            onSubmit={async (e) => {
+            onSubmit={(e) => {
               e.preventDefault();
-              const formData = new FormData(e.currentTarget);
-              const email = formData.get("email");
-
-              try {
-                const res = await fetch("/api/notify", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({ email }),
-                });
-
-                if (res.ok) {
-                  setSubmitted(true);
-                  e.currentTarget.reset();
-                }
-              } catch (error) {
-                console.error("Error:", error);
-              }
+              setSubmitted(true);
             }}
           >
             <input
