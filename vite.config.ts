@@ -5,7 +5,7 @@ export default defineConfig({
     base: "/",
   },
   tanstackStart: {
-    server: { entry: "server" },
+    server: { entry: "./src/server/server.ts" }, // Add explicit path
     pages: [{ path: "/" }, { path: "/adaptordie" }],
     prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
